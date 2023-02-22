@@ -2,6 +2,8 @@
 #include<string>
 #include <stdlib.h>
 #include <pthread.h>
+#include<chrono>
+#include<thread>
 #if 1
 #include <sys/socket.h>
 #endif
@@ -116,6 +118,8 @@ void node::start_pelegs_le(){
 			}
 			rnd_done = true;
 		}
+		// TODO:  try catch mention exception e
+		this_thread::sleep_for(chrono::milliseconds(50));
 	}
 }
 
